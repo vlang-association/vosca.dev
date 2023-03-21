@@ -38,6 +38,29 @@ main {
       line-height: 1.1;
       margin-bottom: 20px;
 
+      @media (max-width: 380px) {
+        font-size: 40px;
+      }
+
+      @media (max-width: 430px) and (min-width: 380px) {
+        font-size: 45px;
+      }
+
+      @media (max-width: 500px) and (min-width: 430px) {
+        font-size: 50px;
+      }
+
+      @media (max-width: 700px) and (min-width: 500px) {
+        font-size: 60px;
+      }
+
+      @media (max-width: 1000px) {
+        .second-line {
+          background: linear-gradient(357deg, #4CF1FD -0.81%, #0176D1 98.3%) !important;
+          -webkit-background-clip: text !important;
+        }
+      }
+
       .first-line {
         font-weight: 400;
       }
@@ -76,7 +99,9 @@ main {
 
     .buttons {
       display: flex;
+      flex-wrap: wrap;
       column-gap: 20px;
+      row-gap: 20px;
 
       a {
         padding: 15px 30px;

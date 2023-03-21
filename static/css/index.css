@@ -916,6 +916,32 @@ main .first-page .title {
   line-height: 1.1;
   margin-bottom: 20px;
 }
+@media (max-width: 380px) {
+  main .first-page .title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 430px) and (min-width: 380px) {
+  main .first-page .title {
+    font-size: 45px;
+  }
+}
+@media (max-width: 500px) and (min-width: 430px) {
+  main .first-page .title {
+    font-size: 50px;
+  }
+}
+@media (max-width: 700px) and (min-width: 500px) {
+  main .first-page .title {
+    font-size: 60px;
+  }
+}
+@media (max-width: 1000px) {
+  main .first-page .title .second-line {
+    background: linear-gradient(357deg, #4CF1FD -0.81%, #0176D1 98.3%) !important;
+    -webkit-background-clip: text !important;
+  }
+}
 main .first-page .title .first-line {
   font-weight: 400;
 }
@@ -946,7 +972,9 @@ main .first-page .subtitle a:visited {
 }
 main .first-page .buttons {
   display: flex;
+  flex-wrap: wrap;
   column-gap: 20px;
+  row-gap: 20px;
 }
 main .first-page .buttons a {
   padding: 15px 30px;
