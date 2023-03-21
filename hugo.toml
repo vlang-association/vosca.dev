@@ -1,0 +1,10 @@
+baseURL = 'https://vlang.foundation/'
+languageCode = 'en-us'
+title = 'V Foundation'
+ignoreFiles = [".scss$", ".ts$"]
+
+[params]
+visibleTitle = 'Foundation'
+
+[minify]
+minifyOutput = true

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+{{ partial "header.html" . }}
+
+<main>
+  <div class="first-page">
+    <h1 class="title">
+      <span class="first-line">Foundation of</span><br>
+      <span class="second-line">V Programming Language</span>
+    </h1>
+    <span class="subtitle">
+      <a href="https://learn.vlang.foundation" target="_blank" >Learn</a>.
+      <a href="https://play.vlang.foundation" target="_blank" >Play</a>.
+      Contribute.
+    </span>
+    <div class="buttons">
+      <a href="https://docs.vlang.foundation" class="gradient">
+        Learn more about V →
+      </a>
+      <a href="" class="border">
+        Foundation goals
+      </a>
+    </div>
+  </div>
+
+<!--  <div class="latest-news">-->
+<!--    <h2>Latest news</h2>-->
+<!--  </div>-->
+</main>
+
+{{ partial "footer.html" . }}
+
+{{ partial "script.html" .}}
+</body>
+</html>

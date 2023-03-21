@@ -1,0 +1,113 @@
+@import "fonts";
+@import "colors";
+@import "header";
+@import "footer";
+@import "404-page";
+@import "latest-news";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "JetBrainsSans", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+
+  margin: 70px 0;
+  padding: 0;
+
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+main {
+  width: 100%;
+  padding: 50px 50px;
+
+  display: grid;
+
+  @media (max-width: 1000px) {
+    padding: 50px 30px;
+  }
+
+  .first-page {
+    padding: 80px 0 150px;
+
+    .title {
+      font-size: 80px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+
+      .first-line {
+        font-weight: 400;
+      }
+
+      .second-line {
+        font-weight: 900;
+
+        background: linear-gradient(261.61deg, #4CF1FD -0.81%, #0176D1 98.3%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+    }
+
+    .subtitle {
+      display: block;
+      font-size: 17px;
+      margin-bottom: 60px;
+      margin-left: 5px;
+      color: var(--secondary-color);
+
+      a {
+        color: var(--secondary-color);
+        text-decoration: none;
+
+        &:hover {
+          color: var(--text-color) !important;
+          border-bottom: 1px solid var(--text-color);
+        }
+
+        &:visited {
+          color: var(--secondary-color);
+        }
+      }
+    }
+
+    .buttons {
+      display: flex;
+      column-gap: 20px;
+
+      a {
+        padding: 15px 30px;
+        border: none;
+        border-radius: 30px;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        color: var(--text-color);
+        text-decoration: none;
+
+        &.gradient {
+          background: linear-gradient(261.61deg, #21a3e1 -0.81%, #0176D1 98.3%);
+          color: var(--white);
+
+          &:hover {
+            opacity: 0.9;
+          }
+        }
+
+        &.border {
+          background: transparent;
+          border: 1px solid var(--text-color);
+          font-weight: 500;
+
+          &:hover {
+            border: 1px solid var(--brand-color);
+            color: var(--brand-color);
+          }
+        }
+      }
+    }
+  }
+}

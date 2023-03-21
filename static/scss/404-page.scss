@@ -1,0 +1,12 @@
+.page-404 {
+  margin-bottom: 150px;
+
+  @media (max-width: 1000px) {
+    margin-bottom: 80px;
+  }
+
+  h1 {
+    font-size: 100px;
+    margin-bottom: 20px;
+  }
+}
