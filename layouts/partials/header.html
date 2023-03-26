@@ -1,8 +1,8 @@
-<div class="header-component fixed underline transparent-desktop with-search-desktop">
+<div class="header-component fixed underline transparent-desktop with-search-desktop search-desktop-after-logo">
     <header>
         <div class="header-container">
             <div class="logo">
-                <a href="https://vlang.foundation/" target="_blank">
+                <a href="https://vlang.foundation/">
                     <img src="https://vlang.foundation/images/logo.svg" alt="V Logo">
                 </a>
 
@@ -10,7 +10,7 @@
             </div>
 
             <div class="mobile-header-logo">
-                <a href="https://vlang.foundation/" target="_blank">
+                <a href="https://vlang.foundation/">
                     <img src="https://vlang.foundation/images/logo.svg" alt="V Logo">
                 </a>
 
@@ -144,12 +144,12 @@
                 </li>
                 <li class="navigation-item with-mobile-items">
                     <span class="with-icon js-open-menu">
-                        Play
                         <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
                              viewBox="0 0 24 24">
                             <path class="icon-data"
                                   d="M12,16c-0.3,0-0.5-0.1-0.7-0.3l-6-6c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l5.3,5.3l5.3-5.3c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C12.5,15.9,12.3,16,12,16z"></path>
                         </svg>
+                        Play
                     </span>
 
                     <ul class="sub-menu">
@@ -192,7 +192,12 @@
                     </span>
                     </label>
 
-                    <input id="search-input" type="text" placeholder="Search docs" class="js-search-input">
+                    <input id="search-input" type="text"
+                           autocorrect="off" autocapitalize="off" spellcheck="false"
+                           autocomplete="off"
+                           placeholder="Search everywhere..."
+                           data-place="all"
+                           class="js-search-input">
 
                     <button class="close-button clear-input js-clear-input-button">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -207,29 +212,34 @@
                 <button class="close-search-button js-close-search-button">Cancel</button>
             </div>
 
-            <div class="search-results">
-                <div class="no-results-found">
-                    <span>No results for</span>
-                    <span class="search-sentence">"sss"</span>
-                </div>
-
-                <ul class="search-results-list" role="listbox">
-                    <li class="search-result" role="option" aria-selected="true">
-                        <a class="search-result-content">
-                            <span class="title">Foo</span>
-                        </a>
+            <div class="search-place">
+                <span class="search-in-label">Search in:</span>
+                <ul>
+                    <li class="search-place-item selected">
+                        <input type="radio" id="search-place-all" name="search-place" value="all">
+                        <label for="search-place-all">All</label><br>
                     </li>
-                    <li class="search-result" role="option">
-                        <a class="search-result-content">
-                            <span class="title">Boo</span>
-                        </a>
+                    <li class="search-place-item">
+                        <input type="radio" id="search-place-docs" name="search-place" value="documentation" checked>
+                        <label for="search-place-docs">Documentation</label><br>
                     </li>
-                    <li class="search-result" role="option">
-                        <a class="search-result-content">
-                            <span class="title">Goo</span>
-                        </a>
+                    <li class="search-place-item">
+                        <input type="radio" id="search-place-blog" name="search-place" value="blog">
+                        <label for="search-place-blog">Blog</label><br>
+                    </li>
+                    <li class="search-place-item">
+                        <input type="radio" id="search-place-modules" name="search-place" value="modules">
+                        <label for="search-place-modules">Modules</label><br>
                     </li>
                 </ul>
+            </div>
+
+            <div class="search-results with-caption">
+                <div class="caption">
+                    <span>Type something to search</span>
+                </div>
+
+                <ul class="search-results-list" role="listbox"></ul>
             </div>
             <div class="search-footer">
                 <div class="search-footer-content">

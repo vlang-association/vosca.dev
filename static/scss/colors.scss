@@ -105,6 +105,7 @@ html {
   --search-button-hover-border-color: var(--brand-color);
   --search-button-text-color: var(--gray-7e);
   --search-input-placeholder-color: var(--gray-be);
+  --search-labels-text-color: var(--gray-7e);
   --search-result-active-background-color: var(--brand-color);
   --search-result-active-text-color: var(--text-color);
   --search-result-footer-hint-text-color: var(--gray-7e);
@@ -184,6 +185,7 @@ html[data-theme="dark"] {
   --search-button-hover-border-color: var(--brand-color);
   --search-button-text-color: var(--gray-be);
   --search-input-placeholder-color: var(--gray-5a);
+  --search-labels-text-color: var(--gray-5a);
   --search-result-active-background-color: var(--brand-color);
   --search-result-active-text-color: var(--text-color);
   --search-result-footer-hint-text-color: var(--gray-5a);
