@@ -1,12 +1,38 @@
 .page-404 {
-  margin-bottom: 150px;
+  margin: 100px 0 100px 0;
 
   @media (max-width: 1000px) {
-    margin-bottom: 80px;
+    margin: 80px 0 80px 0;
   }
 
   h1 {
-    font-size: 100px;
+    font-weight: 800;
+    font-size: 150px;
     margin-bottom: 20px;
+    line-height: 1;
+
+    background: linear-gradient(261.61deg, #4CF1FD -0.81%, #0176D1 98.3%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  p {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  a {
+    color: var(--text-color);
+    text-decoration: none;
+    border-bottom: 1px solid var(--text-color);
+
+    &:hover {
+      border-bottom: 2px solid var(--text-color);
+    }
+
+    &:visited {
+      color: var(--text-color);
+    }
   }
 }

@@ -1,0 +1,94 @@
+{{ define "main" }}
+<div class="article">
+    <div class="article-header">
+        <div class="categories">
+            <ul>
+                {{ with .Params.categories }} {{ range . }}
+                {{ $href := print (absURL "categories/") (urlize .) }}
+                <li>
+                    <a class="category {{ .}}" href="{{ $href }}/">
+                        {{ . }}
+                    </a>
+                </li>
+                {{ end }}
+                {{ end }}
+            </ul>
+        </div>
+
+        <h1 class="title">{{ .Title | markdownify }}</h1>
+
+        <div class="details">
+            <p class="author">
+                <a href="/people/{{ .Params.authorlink }}">{{ .Params.authorname }}</a>
+            </p>
+
+            <!-- We add the date of publication -->
+            {{ $dateTime := .Params.date.Format "2006-01-02" }}
+            <!-- The dateformat is always generated against 2006/01/02 -->
+            {{ $dateFormat := .Site.Params.DateFormat | default "January 2, 2006" }}
+            <div class="date">
+                <time datetime="{{ $dateTime }}">
+                    {{ .Params.date.Format $dateFormat }}
+                </time>
+            </div>
+        </div>
+    </div>
+
+    {{ $authorlink := .File.BaseFileName }}
+    <div class="content">
+        {{ .Content }}
+    </div>
+
+    <!-- Append list of posts by author if necessary -->
+    {{ if eq .Params.Page "People" }}
+    <h1>Posts by {{ .Title | markdownify }}</h1>
+    {{ range .Site.Pages.ByPublishDate.Reverse }}
+    <!-- Iterate over all top level pages -->
+    {{ if eq .Params.Page "Blog" }}
+    <!-- We are interested only in the blog posts -->
+    <!-- Process latest posts first -->
+    {{ if eq .Params.authorlink $authorlink }}
+    <div class="post">
+        <h3>
+            <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+        </h3>
+        {{ if .Params.image }}
+        <figure>
+            <a href="{{ .RelPermalink }}">
+                <img
+                        src="/{{ .Params.image }}"
+                        alt="{{ .Params.summary | markdownify }}"
+                />
+            </a>
+            <figcaption>{{ .Params.subtitle | markdownify }}</figcaption>
+        </figure>
+        {{ else }}
+        <p>{{ .Params.summary | markdownify }}</p>
+        {{ end }} {{ end }}
+    </div>
+    {{ end }} {{ end }} {{ end }} {{ if .Params.authorname }}
+
+    {{ if eq .Params.Page "Blog" }}
+    <div class="giscus"></div>
+    <script
+            src="https://giscus.app/client.js"
+            data-repo="vlang/vlang-blog"
+            data-repo-id="MDEwOlJlcG9zaXRvcnk0MDc5NjgwNDQ="
+            data-category="General"
+            data-category-id="DIC_kwDOGFEZLM4B_ojp"
+            data-mapping="title"
+            data-reactions-enabled="0"
+            data-emit-metadata="0"
+            data-theme="light"
+            data-lang="en"
+            crossorigin="anonymous"
+            async
+    ></script>
+    <script>
+        setTimeout(() => {
+            changeGiscusTheme(currentTheme)
+        }, 3000)
+    </script>
+    {{ end }} {{ end }}
+</div>
+{{ end }}
