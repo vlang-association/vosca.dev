@@ -1,0 +1,31 @@
+.email-block {
+  width: calc(100% + 100px);
+  padding: 60px 50px 50px;
+  margin: 0 -50px -80px;
+
+  color: var(--white);
+  background: linear-gradient(261.61deg, #4CF1FD -0.81%, #0176D1 98.3%);
+
+  @media (max-width: 1000px) {
+    width: calc(100% + 60px);
+    margin: 0 -30px -80px;
+
+    padding: 50px 30px 50px;
+  }
+
+  .email {
+    font-size: 60px;
+
+    @media (max-width: 1000px) {
+      font-size: 50px;
+    }
+
+    @media (max-width: 800px) {
+      font-size: 30px;
+    }
+
+    @media (max-width: 400px) {
+      font-size: 25px;
+    }
+  }
+}

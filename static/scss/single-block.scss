@@ -1,0 +1,31 @@
+.single-block {
+  margin-bottom: 40px;
+
+  a {
+    color: inherit;
+    height: max-content;
+    text-decoration: none;
+
+    box-shadow: 0 1px 0 0 currentColor;
+    transition: box-shadow .15s ease-in-out;
+
+    &.article-card {
+      box-shadow: none;
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
+
+    &:hover {
+      color: var(--text-color);
+      box-shadow: 0 2px 0 0 var(--text-color);
+    }
+  }
+
+  h2 {
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+}
