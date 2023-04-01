@@ -537,7 +537,7 @@ aside.mobile-header-aside.open + .header-mobile-overlay {
 }
 
 .search-window {
-  display: grid;
+  display: none;
   visibility: hidden;
   position: fixed;
   top: 0;
@@ -553,6 +553,7 @@ aside.mobile-header-aside.open + .header-mobile-overlay {
   transition: opacity .20s, visibility .20s, transform .20s;
 
   &.open {
+    display: grid;
     visibility: visible;
     opacity: 1;
     transform: translateY(0px);

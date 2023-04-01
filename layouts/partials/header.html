@@ -10,15 +10,15 @@
             </div>
 
             <div class="mobile-header-logo">
-                <a href="https://vlang.foundation/">
-                    <img src="https://vlang.foundation/images/logo.svg" alt="V Logo">
+                <a href="/" aria-label="Go to main V Foundation page">
+                    <img width="30" height="31" src="https://vlang.foundation/images/logo.svg" alt="V Logo">
                 </a>
 
-                <a class="title" href="/index.html">{{ .Site.Params.visibleTitle }}</a>
+                <a class="title" href="/">{{ .Site.Params.visibleTitle }}</a>
             </div>
 
             <div class="search-container">
-                <button class="search-button js-search-button">
+                <button class="search-button js-search-button" aria-label="Search">
                     <span class="search-icon">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle class="icon-stroke" cx="6.15425" cy="6.5229" r="4.43781"
@@ -34,12 +34,16 @@
                 </button>
             </div>
 
-            <ul class="main-header-list">
+            <ul itemscope itemtype="http://schema.org/SiteNavigationElement" class="main-header-list">
                 <li class="navigation-item">
-                    <a href="https://docs.vlang.foundation">Documentation</a>
+                    <a itemprop="url" class="active" href="https://docs.vlang.foundation">
+                        <span itemprop="name">Documentation</span>
+                    </a>
                 </li>
                 <li class="navigation-item">
-                    <a href="#">Standard Library</a>
+                    <a itemprop="url" href="https://modules.vlang.foundation">
+                        <span itemprop="name">Modules</span>
+                    </a>
                 </li>
                 <li class="navigation-item with-items">
                     <span class="with-icon js-open-menu">
@@ -52,21 +56,29 @@
                     </span>
                     <ul class="sub-menu">
                         <li class="sub-menu-item">
-                            <a href="https://play.vlang.foundation/">Playground</a>
+                            <a itemprop="url" href="https://play.vlang.foundation/">
+                                <span itemprop="name">Playground</span>
+                            </a>
                         </li>
                         <li class="sub-menu-item">
-                            <a href="https://learn.vlang.foundation/">Vings</a>
+                            <a itemprop="url" href="https://learn.vlang.foundation/">
+                                <span itemprop="name">Vings</span>
+                            </a>
                         </li>
                     </ul>
                 </li>
                 <li class="navigation-item">
-                    <a href="https://blog.vlang.foundation/" target="_blank">Blog</a>
+                    <a itemprop="url" href="https://blog.vlang.foundation/">
+                        <span itemprop="name">Blog</span>
+                    </a>
                 </li>
                 <li class="navigation-item">
-                    <a href="https://github.com/vlang/v" target="_blank">GitHub</a>
+                    <a itemprop="url" href="https://github.com/vlang/v" target="_blank">
+                        <span itemprop="name">GitHub</span>
+                    </a>
                 </li>
 
-                <li class="js-change-theme__action change-theme">
+                <li class="js-change-theme__action change-theme" aria-label="Change theme">
                     <svg class="theme-icon sun" width="30" height="30" viewBox="0 0 30 30" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_4_47)">
@@ -91,7 +103,7 @@
 
             <ul class="mobile-header-list">
                 <li>
-                    <button class="search js-search-button">
+                    <button class="search js-search-button" aria-label="Search">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_126_9)">
                                 <circle class="icon-stroke" cx="6.15425" cy="6.5229" r="4.43781"
@@ -110,7 +122,7 @@
                     </button>
                 </li>
                 <li>
-                    <button class="open-menu js-open-mobile-menu">
+                    <button class="open-menu js-open-mobile-menu" aria-label="Open mobile right menu">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect class="icon-data" x="1" y="2.00775" width="14" height="1" rx="0.5" fill="black"/>
                             <rect class="icon-data" x="1" y="13.0379" width="14" height="1" rx="0.5" fill="black"/>
@@ -125,7 +137,8 @@
         <nav>
             <div class="aside-header">
                 <div class="close-button-wrapper">
-                    <div class="close-button js-close-header-aside-button">
+                    <div class="close-button js-close-header-aside-button" role="button"
+                         aria-label="Close mobile right menu">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path class="icon-stroke" d="M2.32349 2.34091L13.7059 13.7233" stroke="black"
                                   stroke-linecap="round"/>
@@ -140,7 +153,7 @@
                     <a href="https://docs.vlang.foundation">Documentation</a>
                 </li>
                 <li class="navigation-item">
-                    <a href="#">Standard Library</a>
+                    <a href="https://modules.vlang.foundation">Modules</a>
                 </li>
                 <li class="navigation-item with-mobile-items">
                     <span class="with-icon js-open-menu">
@@ -168,7 +181,7 @@
                     <a href="https://github.com/vlang/v" target="_blank">GitHub</a>
                 </li>
                 <li class="navigation-item js-change-theme__action">
-                    <a target="_blank">Change theme</a>
+                    <span>Change theme</span>
                 </li>
             </ul>
         </nav>
@@ -199,7 +212,7 @@
                            data-place="all"
                            class="js-search-input">
 
-                    <button class="close-button clear-input js-clear-input-button">
+                    <button class="close-button clear-input js-clear-input-button" aria-label="Clear search">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path class="icon-stroke" d="M2.32349 2.34091L13.7059 13.7233" stroke="black"
                                   stroke-linecap="round"/>
@@ -209,7 +222,7 @@
                     </button>
                 </div>
 
-                <button class="close-search-button js-close-search-button">Cancel</button>
+                <button class="close-search-button js-close-search-button" aria-label="Cancel search">Cancel</button>
             </div>
 
             <div class="search-place">

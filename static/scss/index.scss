@@ -21,6 +21,24 @@ html[data-theme="dark"] {
   --border-button-background-hover-color: var(--light-transparent-gray);
 }
 
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  margin: 5px;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+}
+
 body {
   font: 400 14px/1.5 "JetBrainsSans", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -78,6 +96,7 @@ main {
       }
 
       .first-line {
+        display: block;
         font-weight: 400;
       }
 

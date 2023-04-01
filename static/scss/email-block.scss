@@ -27,5 +27,18 @@
     @media (max-width: 400px) {
       font-size: 25px;
     }
+
+    a {
+      color: var(--white);
+      text-decoration: none;
+
+      &:hover {
+        border-bottom: 3px solid var(--white);
+      }
+
+      &:visited {
+        color: var(--white);
+      }
+    }
   }
 }

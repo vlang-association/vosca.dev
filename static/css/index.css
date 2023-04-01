@@ -3,36 +3,43 @@
   font-family: "JetBrainsSans";
   src: url("https://vlang.foundation/fonts/JetBrainsSans-ExtraBold.woff2");
   font-weight: 800;
+  font-display: swap;
 }
 @font-face {
   font-family: "JetBrainsSans";
   src: url("https://vlang.foundation/fonts/JetBrainsSans-Bold.woff2");
   font-weight: 700;
+  font-display: swap;
 }
 @font-face {
   font-family: "JetBrainsSans";
   src: url("https://vlang.foundation/fonts/JetBrainsSans-SemiBold.woff2");
   font-weight: 600;
+  font-display: swap;
 }
 @font-face {
   font-family: "JetBrainsSans";
   src: url("https://vlang.foundation/fonts/JetBrainsSans-Medium.woff2");
   font-weight: 500;
+  font-display: swap;
 }
 @font-face {
   font-family: "JetBrainsSans";
   src: url("https://vlang.foundation/fonts/JetBrainsSans-Regular.woff2");
   font-weight: 400;
+  font-display: swap;
 }
 @font-face {
   font-family: "JetBrainsSans";
   src: url("https://vlang.foundation/fonts/JetBrainsSans-Book.woff2");
   font-weight: 350;
+  font-display: swap;
 }
 @font-face {
   font-family: "JetBrainsSans";
   src: url("https://vlang.foundation/fonts/JetBrainsSans-Light.woff2");
   font-weight: 300;
+  font-display: swap;
 }
 html {
   --dark-gray: #1e1f22;
@@ -618,7 +625,7 @@ aside.mobile-header-aside.open + .header-mobile-overlay {
 }
 
 .search-window {
-  display: grid;
+  display: none;
   visibility: hidden;
   position: fixed;
   top: 0;
@@ -632,6 +639,7 @@ aside.mobile-header-aside.open + .header-mobile-overlay {
   transition: opacity 0.2s, visibility 0.2s, transform 0.2s;
 }
 .search-window.open {
+  display: grid;
   visibility: visible;
   opacity: 1;
   transform: translateY(0px);
@@ -878,7 +886,7 @@ aside.mobile-header-aside.open + .header-mobile-overlay {
 }
 
 footer {
-  width: 100vw;
+  width: 100%;
   padding: 50px 50px 80px;
   margin-top: 30px;
   background-color: var(--footer-background-color);
@@ -1046,6 +1054,16 @@ footer .footer-container .footer-bottom .copyright-line {
   .email-block .email {
     font-size: 25px;
   }
+}
+.email-block .email a {
+  color: var(--white);
+  text-decoration: none;
+}
+.email-block .email a:hover {
+  border-bottom: 3px solid var(--white);
+}
+.email-block .email a:visited {
+  color: var(--white);
 }
 
 .sponsor-block {
@@ -1251,6 +1269,24 @@ html[data-theme=dark] {
   --border-button-background-hover-color: var(--light-transparent-gray);
 }
 
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  margin: 5px;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+}
+
 body {
   font: 400 14px/1.5 "JetBrainsSans", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -1310,6 +1346,7 @@ main .first-page .title {
   }
 }
 main .first-page .title .first-line {
+  display: block;
   font-weight: 400;
 }
 main .first-page .title .second-line {

@@ -1,4 +1,4 @@
-<footer class="underline">
+<footer class="underline" itemscope itemtype="http://schema.org/WPFooter">
     <div class="footer-container">
         <nav>
             <div class="column documentation-column">
@@ -9,18 +9,18 @@
                     <li><a href="https://specs.vlang.foundation">Specification</a></li>
                 </ul>
             </div>
-            <div class="column learn-column">
-                <div class="title">Learn</div>
-                <ul>
-                    <li><a href="https://learn.vlang.foundation">Vings</a></li>
-                </ul>
-            </div>
             <div class="column blog-column">
                 <div class="title">Blog</div>
                 <ul>
                     <li><a href="https://blogs.vlang.foundation">Latest</a></li>
                     <li><a href="https://blogs.vlang.foundation">Tutorials</a></li>
                     <li><a href="https://blogs.vlang.foundation">News</a></li>
+                </ul>
+            </div>
+            <div class="column learn-column">
+                <div class="title">Learn</div>
+                <ul>
+                    <li><a href="https://learn.vlang.foundation">Vings</a></li>
                 </ul>
             </div>
             <div class="column play-column">
@@ -32,28 +32,28 @@
         </nav>
         <div class="footer-bottom">
             <div class="social-links">
-                <a href="https://twitter.com/v_language">
+                <a href="https://twitter.com/v_language" aria-label="Official V Twitter">
                     <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
                 </a>
-                <a href="https://discord.gg/vlang">
+                <a href="https://discord.gg/vlang" aria-label="Official V Discord">
                     <i class="fa fa-discord-alt fa-2x" aria-hidden="true"></i>
                 </a>
-                <a href="https://github.com/vlang/v">
+                <a href="https://github.com/vlang-foundation" aria-label="Official V Software Foundation GitHub">
                     <i class="fa fa-github fa-2x" aria-hidden="true"></i>
                 </a>
-                <a href="https://www.youtube.com/channel/UCLZIElNyubHOvbfudT7KS1A">
+                <a href="https://www.youtube.com/channel/UCLZIElNyubHOvbfudT7KS1A" aria-label="Official V YouTube Channel">
                     <i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i>
                 </a>
-                <a href="https://t.me/vlang_en">
+                <a href="https://t.me/vlang_en" aria-label="Official V Telegram Chat">
                     <i class="fa fa-telegram fa-2x" aria-hidden="true"></i>
                 </a>
-                <a href="https://twitch.tv/v_language">
+                <a href="https://twitch.tv/v_language" aria-label="Official V Twitch Channel">
                     <i class="fa fa-twitch fa-2x" aria-hidden="true"></i>
                 </a>
             </div>
 
             <div class="copyright-line">
-                Copyright &copy; 2022-{{ now.Format "2006" }} V Foundation
+                Copyright &copy; {{ now.Format "2006" }} V Software Foundation
             </div>
         </div>
     </div>
