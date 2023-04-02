@@ -2,6 +2,7 @@
 <html lang="en" data-theme="light">
 <head>
     {{ partial "head.html" . }}
+    <link rel="stylesheet" href="/css/vlang-playground.css">
 </head>
 <body>
 {{ partial "header.html" . }}
@@ -52,6 +53,21 @@
         </div>
     </div>
 
+    <div class="single-block playground-block">
+        <h2>Try V Online</h2>
+
+        <div class="playground-wrapper vlang-play">
+            <pre>
+            fn main() {
+                areas := ['game', 'web', 'tools', 'science', 'systems',
+                          'embedded', 'drivers', 'GUI', 'mobile']
+                for area in areas {
+                    println('Hello, ${area} developers!')
+                }
+            }</pre>
+        </div>
+    </div>
+
     <div class="single-block sponsor-block">
         <h2>Sponsors</h2>
 
@@ -73,6 +89,33 @@
 </main>
 
 {{ partial "footer.html" . }}
+
+<script src="/js/vlang-playground.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        let theme = window.localStorage.getItem('theme');
+        if (!theme) {
+            theme = "dark";
+        }
+
+        if (theme === "null") {
+            window.localStorage.setItem('theme', "dark");
+            theme = "dark";
+        }
+
+        const playgroundElements = document.querySelectorAll(".vlang-play");
+        playgroundElements.forEach(playgroundElement => {
+            const playground = Playground.create(playgroundElement, {
+                fontSize: "15px",
+                highlightOnly: false,
+                showFooter: true,
+                showLineNumbers: true,
+                theme: theme,
+            });
+            playgrounds.push(playground);
+        });
+    })
+</script>
 
 {{ partial "script.html" .}}
 </body>

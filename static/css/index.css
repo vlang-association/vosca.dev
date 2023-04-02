@@ -1257,6 +1257,33 @@ html[data-theme=dark] {
   object-fit: cover;
 }
 
+html {
+  --playground-background-color: var(--background-color);
+}
+
+html[data-theme=dark] {
+  --playground-background-color: var(--almost-black);
+}
+
+.playground-block {
+  position: relative;
+}
+.playground-block .playground-wrapper {
+  width: 100%;
+  margin-top: -10px;
+}
+.playground-block .playground-wrapper .playground__wrapper {
+  border-radius: 10px;
+  background-color: var(--playground-background-color);
+  overflow: hidden;
+}
+.playground-block .playground-wrapper .playground__wrapper .playground__editor {
+  --background-color: var(--playground-background-color);
+}
+.playground-block .playground-wrapper .playground__wrapper .playground__editor .run-style-button {
+  margin-top: 6px;
+}
+
 * {
   box-sizing: border-box;
 }

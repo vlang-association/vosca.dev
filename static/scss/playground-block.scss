@@ -1,0 +1,30 @@
+html {
+  --playground-background-color: var(--background-color);
+}
+
+html[data-theme="dark"] {
+  --playground-background-color: var(--almost-black);
+}
+
+.playground-block {
+  position: relative;
+
+  .playground-wrapper {
+    width: 100%;
+    margin-top: -10px;
+
+    .playground__wrapper {
+      border-radius: 10px;
+      background-color: var(--playground-background-color);
+      overflow: hidden;
+
+      .playground__editor {
+        --background-color: var(--playground-background-color);
+
+        .run-style-button {
+          margin-top: 6px;
+        }
+      }
+    }
+  }
+}
