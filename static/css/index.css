@@ -952,10 +952,12 @@ footer .footer-container .footer-bottom .social-links {
 footer .footer-container .footer-bottom .social-links a {
   font-size: 12px;
   margin-right: 10px;
-  color: var(--secondary-color);
 }
-footer .footer-container .footer-bottom .social-links a:hover {
-  color: var(--brand-color);
+footer .footer-container .footer-bottom .social-links a:hover svg path {
+  fill: var(--brand-color);
+}
+footer .footer-container .footer-bottom .social-links a svg path {
+  fill: var(--secondary-color);
 }
 footer .footer-container .footer-bottom .copyright-line {
   margin-bottom: 0;

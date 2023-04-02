@@ -75,10 +75,15 @@ footer {
         a {
           font-size: 12px;
           margin-right: 10px;
-          color: var(--secondary-color);
 
           &:hover {
-            color: var(--brand-color);
+            svg path {
+              fill: var(--brand-color);
+            }
+          }
+
+          svg path {
+            fill: var(--secondary-color);
           }
         }
       }
