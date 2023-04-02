@@ -95,12 +95,12 @@
     document.addEventListener('DOMContentLoaded', () => {
         let theme = window.localStorage.getItem('theme');
         if (!theme) {
-            theme = "dark";
+            theme = "light";
         }
 
         if (theme === "null") {
-            window.localStorage.setItem('theme', "dark");
-            theme = "dark";
+            window.localStorage.setItem('theme', "light");
+            theme = "light";
         }
 
         const playgroundElements = document.querySelectorAll(".vlang-play");
