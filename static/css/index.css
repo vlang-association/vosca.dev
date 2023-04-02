@@ -401,11 +401,13 @@ header .header-container .mobile-header-logo img {
   width: 30px;
 }
 header .header-container ul {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(6, max-content);
   list-style: none;
   padding: 0;
   margin: 2px 0 0 0;
   justify-self: end;
+  align-items: center;
 }
 @media (max-width: 1000px) {
   header .header-container ul.main-header-list {
@@ -437,9 +439,6 @@ header .header-container ul.main-header-list .change-theme:hover svg path {
 header .header-container ul.main-header-list .change-theme svg {
   width: 18px;
   height: 18px;
-}
-header .header-container ul.main-header-list .change-theme svg.sun {
-  margin-top: 2px;
 }
 header .header-container ul.main-header-list .change-theme svg path {
   fill: var(--text-color);

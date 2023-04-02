@@ -246,11 +246,13 @@ header {
     }
 
     ul {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(6, max-content);
       list-style: none;
       padding: 0;
       margin: 2px 0 0 0;
       justify-self: end;
+      align-items: center;
     }
 
     ul.main-header-list {
@@ -292,10 +294,6 @@ header {
         svg {
           width: 18px;
           height: 18px;
-
-          &.sun {
-            margin-top: 2px;
-          }
 
           path {
             fill: var(--text-color);
