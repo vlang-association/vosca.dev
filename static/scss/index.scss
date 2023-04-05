@@ -121,6 +121,7 @@ main {
       a {
         color: var(--secondary-color);
         text-decoration: none;
+        border-bottom: 1px solid var(--secondary-color);
 
         &:hover {
           color: var(--text-color) !important;
