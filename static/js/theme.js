@@ -1,9 +1,18 @@
 const playgrounds = [];
 
-const currentTheme = localStorage.getItem("theme");
+// quick path to stop blinking the page
+const preferDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+const defaultTheme = preferDark ? "dark" : "light";
+
+const storedTheme = localStorage.getItem("theme");
+// if not stored, use default
+const currentTheme = storedTheme || defaultTheme;
+
+localStorage.setItem("theme", currentTheme);
 document.documentElement.setAttribute("data-theme", currentTheme);
 
 document.addEventListener('DOMContentLoaded', () => {
+    // do all changes after DOM is loaded
     const theme = localStorage.getItem("theme");
     if (theme) {
         setTheme(theme);
