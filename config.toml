@@ -1,6 +1,6 @@
 baseURL = 'https://vlang.foundation/'
 languageCode = 'en-us'
-title = 'V Software Foundation'
+title = 'V Open Source Foundation'
 ignoreFiles = [".scss$", ".ts$"]
 
 [params]
