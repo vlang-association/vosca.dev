@@ -1,0 +1,28 @@
+{
+  "name": "vlang.foundation-site",
+  "version": "1.0.0",
+  "description": "Source code for V Open Source Foundation website",
+  "scripts": {
+    "generate": "npm run hugo-build",
+    "serve": "npm run hugo-watch",
+    "hugo-watch": "hugo serve --disableFastRender",
+    "hugo-build": "hugo",
+    "sass-watch": "sass --watch --source-map ./static/scss/index.scss:./static/css/index.css",
+    "clean": "rm -rf ./public"
+  },
+  "author": {
+    "name": "V Open Source Foundation",
+    "url": "https://vlang.foundation/"
+  },
+  "contributors": [
+    "Petr Makhnev",
+    "Mark @walkingdevel"
+  ],
+  "bugs": {
+    "url": "https://github.com/vlang-foundation/vlang.foundation/issues"
+  },
+  "homepage": "https://vlang.foundation/",
+  "dependencies": {
+    "hugo-bin": "~0.102.0"
+  }
+}
