@@ -1,10 +1,10 @@
-baseURL = 'https://vlang.foundation/'
+baseURL = 'https://vosca.dev/'
 languageCode = 'en-us'
-title = 'V Open Source Foundation'
+title = 'V Open Source Community Association'
 ignoreFiles = [".scss$", ".ts$"]
 
 [params]
-visibleTitle = 'Foundation'
+visibleTitle = 'Association'
 
 [minify]
 minifyOutput = true

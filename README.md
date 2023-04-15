@@ -1,8 +1,8 @@
-# vlang.foundation website
+# vosca.dev website
 
-[![Foundation Official Project][FoundationOfficialBadge]][FoundationUrl]
+[![Association Official Project][AssociationOfficialBadge]][AssociationUrl]
 
-Source code for the [vlang.foundation](https://vlang.foundation) website.
+Source code for the [vosca.dev](https://vosca.dev) website.
 
 ## Development
 
@@ -29,9 +29,9 @@ npm run sass-watch
 ## License
 
 This project is under the **MIT License**. See the
-[LICENSE](https://github.com/vlang-foundation/vlang.foundation/blob/master/LICENSE)
+[LICENSE](https://github.com/vlang-association/vosca.dev/blob/master/LICENSE)
 file for the full license text.
 
-[FoundationOfficialBadge]: https://vlang.foundation/badge.svg
+[AssociationOfficialBadge]: https://vosca.dev/badge.svg
 
-[FoundationUrl]: https://vlang.foundation
+[AssociationUrl]: https://vosca.dev

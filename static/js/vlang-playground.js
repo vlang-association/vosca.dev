@@ -12254,23 +12254,23 @@
           </svg>
         </div>
       </div>
-      
+
       <div class="js-playground__action-copy copy-button bottom">
-         <svg xmlns='http://www.w3.org/2000/svg' 
-              fill='none' 
-              height='20' 
-              width='20' 
-              stroke='rgba(128,128,128,1)' 
-              stroke-width='2' 
+         <svg xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              height='20'
+              width='20'
+              stroke='rgba(128,128,128,1)'
+              stroke-width='2'
               viewBox='0 0 24 24'>
               <path stroke-linecap='round' stroke-linejoin='round' d='M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2'/>
          </svg>
       </div>
-      
+
       <!-- Place for CodeMirror editor -->
       <textarea aria-label="Code snippet area"></textarea>
     </div>
-    
+
     <div class="js-terminal playground__terminal">
       <button class="js-terminal__close-button terminal__close-button">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -12280,7 +12280,7 @@
       <pre class="js-terminal__output terminal__output"></pre>
     </div>
   </div>
-  
+
   <div class="js-playground__footer playground__footer">
     <span class="js-playground-link playground-link">Playground \u2192</span>
   </div>
@@ -12412,7 +12412,7 @@
         setupPlaygroundLink() {
             this.playgroundElement.querySelector(".js-playground-link").addEventListener("click", () => {
                 var a;
-                let t = "https://play.vlang.foundation/?base64=",
+                let t = "https://play.vosca.dev/?base64=",
                     n = (a = this.editor.snippet) == null ? void 0 : a.getRunnableCode(), l = btoa(n), s = t + l;
                 window.open(s, "_blank")
             })
@@ -12433,7 +12433,7 @@
                 showFoldedCodeButton: !0,
                 showFooter: !0,
                 showCopyButton: !0,
-                server: "https://play.vlang.foundation/"
+                server: "https://play.vosca.dev/"
             }
         }
 

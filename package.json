@@ -1,7 +1,7 @@
 {
-  "name": "vlang.foundation-site",
+  "name": "vosca.dev-site",
   "version": "1.0.0",
-  "description": "Source code for V Open Source Foundation website",
+  "description": "Source code for V Open Source Community Association (VOSCA) website",
   "scripts": {
     "generate": "npm run hugo-build",
     "serve": "npm run hugo-watch",
@@ -11,17 +11,17 @@
     "clean": "rm -rf ./public"
   },
   "author": {
-    "name": "V Open Source Foundation",
-    "url": "https://vlang.foundation/"
+    "name": "V Open Source Community Association (VOSCA)",
+    "url": "https://vosca.dev/"
   },
   "contributors": [
     "Petr Makhnev",
     "Mark @walkingdevel"
   ],
   "bugs": {
-    "url": "https://github.com/vlang-foundation/vlang.foundation/issues"
+    "url": "https://github.com/vlang-association/vosca.dev/issues"
   },
-  "homepage": "https://vlang.foundation/",
+  "homepage": "https://vosca.dev/",
   "dependencies": {
     "hugo-bin": "~0.102.0"
   }
