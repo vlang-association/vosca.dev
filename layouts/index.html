@@ -2,7 +2,7 @@
 <html lang="en" data-theme="light">
 <head>
     {{ partial "head.html" . }}
-    <link rel="stylesheet" href="/css/vlang-playground.css">
+    <link rel="stylesheet" href="https://unpkg.com/vlang-playground@1/dist/vlang-playground.css">
 </head>
 <body>
 {{ partial "header.html" . }}
@@ -33,7 +33,7 @@
             <div class="article-cards">
                 <a class="article-card" href="https://blog.vosca.dev/introducing-association/">
                     <span class="image">
-                        <img src="https://blog.vosca.dev/images/introducing-association/vosca-small.png"
+                        <img src="/images/vosca-small.png"
                              alt="The V Open Source Community Association is a non-profit organization that is dedicated to the development of the V language. It is a place where people can come together to work on the V language and its ecosystem.">
                     </span>
                     <p class="date">
@@ -43,7 +43,7 @@
                     <p class="description">Brief overview of the Association&rsquo;s mission</p>
                     <p class="author">
                         <span class="avatar">
-                            <img src="https://blog.vosca.dev/images/avatar/petr-makhnev.png"
+                            <img src="/images/petr-makhnev.png"
                                  alt="Petr Makhnev avatar">
                         </span>
                         <span>Petr Makhnev</span>
@@ -91,7 +91,7 @@
 
 {{ partial "footer.html" . }}
 
-<script src="/js/vlang-playground.js"></script>
+<script src="https://unpkg.com/vlang-playground@1"></script>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         let theme = window.localStorage.getItem('theme');
