@@ -1302,6 +1302,7 @@ html {
 }
 
 html[data-theme=dark] {
+  color-scheme: dark;
   --border-button-background-hover-color: var(--light-transparent-gray);
 }
 
