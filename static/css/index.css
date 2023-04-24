@@ -1289,9 +1289,6 @@ html[data-theme=dark] {
 .playground-block .playground-wrapper .playground__wrapper .playground__editor {
   --background-color: var(--playground-background-color);
 }
-.playground-block .playground-wrapper .playground__wrapper .playground__editor .run-style-button {
-  margin-top: 6px;
-}
 
 * {
   box-sizing: border-box;
