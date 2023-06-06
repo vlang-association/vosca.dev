@@ -23,7 +23,7 @@ npm run sass-watch
 ## License
 
 This project is under the **MIT License**. See the
-[LICENSE](https://github.com/vlang-association/vosca.dev/blob/master/LICENSE)
+[LICENSE](https://github.com/vlang-association/vosca.dev/blob/main/LICENSE)
 file for the full license text.
 
 [AssociationOfficialBadge]: https://vosca.dev/badge.svg
